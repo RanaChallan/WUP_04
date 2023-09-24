@@ -11,7 +11,12 @@ output:
 require(knitr)
 require(tidyverse)
 require(tigerstats)
+mydata <- read.csv(file="GSScsv.csv")
+```
 
+```{r eval=FALSE}
+mydata <- mydata %>%
+mutate(across(where(is.character), as.factor))
 ```
 
 # Introduction
